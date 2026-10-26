@@ -13,6 +13,16 @@ A Claude Code skill for **Lovable-style UI iteration in any project**: you type 
 | — | ~10 เรื่อง / ครึ่งวัน: Claude **แนะนำ**ให้ปิดรอบ (ไม่ปิดเอง) |
 | `จบรอบ` / `end round` | ตรวจเต็ม (จอคุณ + มือถือ · สว่าง/มืด · ความต่างสี · เทสต์) → จดคำเคาะทีเดียว → PR เดียว → ขึ้นเว็บ → สรุป |
 
+## ต้องมีอะไรก่อนใช้ · Requirements
+
+- **Claude Code** — ใช้ได้ดีที่สุดบน **Claude Desktop app** (มีพาแนลพรีวิว + รายการงาน) · บน terminal/IDE ก็ใช้ได้ แต่คุณต้องเปิดเบราว์เซอร์ดูพรีวิวเอง
+- โปรเจคที่รัน **dev server** ได้ (เว็บ / แอปที่ดูผลในเบราว์เซอร์)
+- แนะนำให้ใช้ **git** — จะได้ย้อนงานทีละเรื่องได้ และส่งงานเป็น PR เดียวตอนจบรอบ (ไม่มี git ก็ใช้ได้ แค่ไม่มีขั้นตอน PR)
+
+> ⚠️ **ถ้าพรีวิวต่อฐานข้อมูลจริง** (เช่น dev server ใช้ฐานข้อมูล production) สกิลจะไม่กดปุ่มที่บันทึก/ส่ง/ลบให้ และจะเตือนคุณตั้งแต่เริ่มรอบ — ทางที่ดีที่สุดคือให้พรีวิวต่อฐานทดสอบ
+
+Works best in the Claude Desktop app (preview pane + task list); in the terminal/IDE you open the preview in your own browser. If your preview talks to a production database, the skill will not click anything that saves, sends or deletes.
+
 ## ติดตั้ง · Install
 
 ```bash
@@ -21,4 +31,4 @@ git clone https://github.com/trin-zenityx/fast-chat-mode ~/.claude/skills/fast-c
 
 Project-specific details (check commands, PR flow, decision log, write guards) are read from each project's own `CLAUDE.md` / memory — the skill stays generic.
 
-From ZenityX — จับมือทำจริง ใช้ได้จริง · Hands-on AI. Real results.
+MIT License · From ZenityX — จับมือทำจริง ใช้ได้จริง · Hands-on AI. Real results.
